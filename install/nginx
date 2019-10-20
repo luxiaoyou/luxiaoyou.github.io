@@ -36,4 +36,5 @@ make install
 
 $NG_PREFIX/sbin/nginx -t
 $NG_PREFIX/sbin/nginx
+
 find $NG_PREFIX
