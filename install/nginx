@@ -9,9 +9,10 @@ NG_USER=nginx
 NG_GROUP=$NG_USER
 NG_PREFIX=/opt/server/nginx
 
-wget http://nginx.org/download/nginx-1.16.0.tar.gz
-tar xvf nginx-1.16.0.tar.gz
-cd nginx-1.16.0
+NG_TAR_NAME=nginx-1.16.1.tar.gz
+wget http://nginx.org/download/$NG_TAR_NAME
+tar xvf $NG_TAR_NAME
+cd ${NG_TAR_NAME/.tar.gz}
 
 
 groupadd $NG_GROUP
