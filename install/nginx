@@ -14,8 +14,9 @@ tar xvf nginx-1.16.0.tar.gz
 cd nginx-1.16.0
 
 
-groupadd $NG_GROUP
+
 useradd $NG_USER -g $NG_USER -M -s /sbin/nologin
+groupadd $NG_GROUP
 
 ./configure \
 --user=$NG_USER \
