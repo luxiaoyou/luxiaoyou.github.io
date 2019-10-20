@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-10-20 周日 14:07 -->
+<!-- 2019-10-20 周日 14:42 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Bruce Lu - 卢小友的博客</title>
@@ -257,26 +257,27 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org8173aca">1. 笔记</a></li>
-<li><a href="#org472c8ff">2. 常用工具安装部署</a>
+<li><a href="#org6949fd6">1. 笔记</a></li>
+<li><a href="#orgb943f2a">2. 常用工具安装部署</a>
 <ul>
-<li><a href="#org5daa6a7">2.1. 安装 Docker</a></li>
+<li><a href="#org563b044">2.1. 安装 Docker</a></li>
+<li><a href="#orga3c8073">2.2. 编译安装 Nginx</a></li>
 </ul>
 </li>
-<li><a href="#orgcdc4246">3. Docker镜像构建与服务部署</a>
+<li><a href="#orgb8f0ca5">3. Docker镜像构建与服务部署</a>
 <ul>
-<li><a href="#org2bd7778">3.1. gitbook</a></li>
-<li><a href="#orgaa69694">3.2. jenkins lts</a></li>
-<li><a href="#org6084054">3.3. nodeppt</a></li>
-<li><a href="#orgb785974">3.4. redmine</a></li>
+<li><a href="#org446d7b4">3.1. gitbook</a></li>
+<li><a href="#orgb1deb7b">3.2. jenkins lts</a></li>
+<li><a href="#org039d3c3">3.3. nodeppt</a></li>
+<li><a href="#org8937c53">3.4. redmine</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org8173aca" class="outline-2">
-<h2 id="org8173aca"><span class="section-number-2">1</span> 笔记</h2>
+<div id="outline-container-org6949fd6" class="outline-2">
+<h2 id="org6949fd6"><span class="section-number-2">1</span> 笔记</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li><a href="notes/notes.html">日常笔记</a></li>
@@ -284,12 +285,12 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org472c8ff" class="outline-2">
-<h2 id="org472c8ff"><span class="section-number-2">2</span> 常用工具安装部署</h2>
+<div id="outline-container-orgb943f2a" class="outline-2">
+<h2 id="orgb943f2a"><span class="section-number-2">2</span> 常用工具安装部署</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org5daa6a7" class="outline-3">
-<h3 id="org5daa6a7"><span class="section-number-3">2.1</span> 安装 Docker</h3>
+<div id="outline-container-org563b044" class="outline-3">
+<h3 id="org563b044"><span class="section-number-3">2.1</span> 安装 Docker</h3>
 <div class="outline-text-3" id="text-2-1">
 <div class="org-src-container">
 <pre class="src src-sh">curl -s https://luxiaoyou.github.io/install/docker | sh
@@ -306,10 +307,27 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
+
+<div id="outline-container-orga3c8073" class="outline-3">
+<h3 id="orga3c8073"><span class="section-number-3">2.2</span> 编译安装 Nginx</h3>
+<div class="outline-text-3" id="text-2-2">
+<div class="org-src-container">
+<pre class="src src-sh">curl -s  https://luxiaoyou.github.io/install/nginx | bash
+</pre>
 </div>
 
-<div id="outline-container-orgcdc4246" class="outline-2">
-<h2 id="orgcdc4246"><span class="section-number-2">3</span> Docker镜像构建与服务部署</h2>
+<p>
+支持系统 <code>[1/1]</code>
+</p>
+<ul class="org-ul">
+<li class="on"><code>[X]</code> Centos 7</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb8f0ca5" class="outline-2">
+<h2 id="orgb8f0ca5"><span class="section-number-2">3</span> Docker镜像构建与服务部署</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 使用前注意事项：
@@ -319,8 +337,8 @@ for the JavaScript code in this tag.
 <li>用于生产环境时请先查阅一遍文件，确认无误后再部署</li>
 </ol>
 </div>
-<div id="outline-container-org2bd7778" class="outline-3">
-<h3 id="org2bd7778"><span class="section-number-3">3.1</span> gitbook</h3>
+<div id="outline-container-org446d7b4" class="outline-3">
+<h3 id="org446d7b4"><span class="section-number-3">3.1</span> gitbook</h3>
 <div class="outline-text-3" id="text-3-1">
 <div class="org-src-container">
 <pre class="src src-sh">git clone https://github.com/luxiaoyou/Dockerfile.git
@@ -330,8 +348,8 @@ docker-compose -d up
 </div>
 </div>
 </div>
-<div id="outline-container-orgaa69694" class="outline-3">
-<h3 id="orgaa69694"><span class="section-number-3">3.2</span> jenkins lts</h3>
+<div id="outline-container-orgb1deb7b" class="outline-3">
+<h3 id="orgb1deb7b"><span class="section-number-3">3.2</span> jenkins lts</h3>
 <div class="outline-text-3" id="text-3-2">
 <div class="org-src-container">
 <pre class="src src-sh">mkdir -p /var/jenkins_home
@@ -349,8 +367,8 @@ docker-compose -d up
 </ul>
 </div>
 </div>
-<div id="outline-container-org6084054" class="outline-3">
-<h3 id="org6084054"><span class="section-number-3">3.3</span> nodeppt</h3>
+<div id="outline-container-org039d3c3" class="outline-3">
+<h3 id="org039d3c3"><span class="section-number-3">3.3</span> nodeppt</h3>
 <div class="outline-text-3" id="text-3-3">
 <div class="org-src-container">
 <pre class="src src-sh">git clone https://github.com/luxiaoyou/Dockerfile.git
@@ -360,8 +378,8 @@ docker build -t nodeppt:8-alpine .
 </div>
 </div>
 </div>
-<div id="outline-container-orgb785974" class="outline-3">
-<h3 id="orgb785974"><span class="section-number-3">3.4</span> redmine</h3>
+<div id="outline-container-org8937c53" class="outline-3">
+<h3 id="org8937c53"><span class="section-number-3">3.4</span> redmine</h3>
 <div class="outline-text-3" id="text-3-4">
 <div class="org-src-container">
 <pre class="src src-sh">git clone https://github.com/luxiaoyou/Dockerfile.git
