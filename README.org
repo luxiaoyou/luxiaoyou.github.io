@@ -1,0 +1,8 @@
+在线阅读 https://luxiaoyou.github.io/
+
+使用容器安装到本地：
+#+begin_src
+git clone https://github.com/luxiaoyou/luxiaoyou.github.io.git
+cd luxiaoyou.github.io
+docker-compose up -d
+#+end_src
