@@ -6,7 +6,7 @@ cd $WORK_PATH
 yum install gcc gcc-c++ autoconf automake zlib zlib-devel openssl openssl-devel -y
 
 NG_USER=nginx
-NG_GROUP=$USER
+NG_GROUP=$NG_USER
 NG_PREFIX=/opt/server/nginx
 
 wget http://nginx.org/download/nginx-1.16.0.tar.gz
@@ -14,9 +14,9 @@ tar xvf nginx-1.16.0.tar.gz
 cd nginx-1.16.0
 
 
-
-useradd $NG_USER -g $NG_USER -M -s /sbin/nologin
 groupadd $NG_GROUP
+useradd $NG_USER -g $NG_USER -M -s /sbin/nologin
+
 
 ./configure \
 --user=$NG_USER \
