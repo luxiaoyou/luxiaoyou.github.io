@@ -1,0 +1,15 @@
+version: "3"
+services:
+  webdocs:
+    build: .
+    image: nginx:docs
+    restart: always
+    container_name: luxiaoyou.github.io
+    ports:
+      - "9001:80"
+    volumes:
+      - /etc/localtime:/etc/localtime
+    networks:
+      - docs
+networks:
+  docs:

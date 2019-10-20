@@ -1,0 +1,11 @@
+.git
+Dockerfile
+docker-compose.yml
+setup
+test
+.projectile
+.gitignore
+.dockerignore
+main
+notes/*.org
+*.org

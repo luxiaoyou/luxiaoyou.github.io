@@ -1,0 +1,16 @@
+#!/bin/bash
+
+centos(){
+    yum install -y yum-utils
+    yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+    yum -y install docker-ce
+    systemctl enable docker
+    systemctl start docker
+}
+
+main(){
+    #OS_NAME=`cat /etc/os-release |grep -E "^ID"|awk -F "=" '{print $2}'`
+    centos
+}
+
+main
