@@ -25,7 +25,6 @@ cp -a ${HTTPD_TAR_NAME/.tar.gz} ./${HTTPD_TAR_HTTPD_NAME/.tar.bz2}/srclib/apr
 
 cd ${HTTPD_TAR_HTTPD_NAME/.tar.bz2}
 
-
 ./configure --prefix=$HTTPD_PREFIX \
  --enable-so \
  --enable-ssl \
