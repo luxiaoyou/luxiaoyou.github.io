@@ -50,6 +50,6 @@ make && make install
 
 sed -e "s/^User daemon/User ${HTTPD_USER}/g" -e "s/^Group daemon/Group ${HTTPD_USER}/g"
 
-${HTTPD_PREFIX}/bin/apachectl start
+"${HTTPD_PREFIX}"/bin/apachectl start
 
-find $HTTPD_PREFIX
+find "$HTTPD_PREFIX"
