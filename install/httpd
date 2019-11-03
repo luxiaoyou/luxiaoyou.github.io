@@ -37,3 +37,5 @@ cd ${HTTPD_TAR_HTTPD_NAME/.tar.bz2}
  --enable-modules=most \
  --enable-mpms-shared=all \
  --with-mpm=$WITH_MPM
+
+make && make install
