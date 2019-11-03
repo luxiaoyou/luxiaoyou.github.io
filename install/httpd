@@ -4,7 +4,8 @@ WORK_PATH=$(cd `dirname $0`;pwd)
 cd $WORK_PATH
 
 yum groupinstall "Development tools" -y
-yum install -y wget
+
+yum install -y openssl-devel pcre-devel expat-devel wget
 
 HTTPD_PREFIX=/opt/server/httpd
 
