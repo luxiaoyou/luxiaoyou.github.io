@@ -11,7 +11,8 @@ yum install -y openssl-devel pcre-devel expat-devel wget
 
 
 HTTPD_PREFIX=/opt/server/httpd
-
+HTTPD_START_APACHECTL=$HTTPD_PREFIX/bin/apachectl
+HTTPD_CONF=$HTTPD_PREFIX/conf/httpd.conf
 HTTPD_TAR_NAME=apr-1.7.0.tar.gz
 HTTPD_TAR_UTIL_NAME=apr-util-1.6.1.tar.gz
 HTTPD_TAR_HTTPD_NAME=httpd-2.4.39.tar.bz2
@@ -48,8 +49,7 @@ cd ${HTTPD_TAR_HTTPD_NAME/.tar.bz2}
 
 make && make install
 
-sed -e "s/^User daemon/User ${HTTPD_USER}/g" -e "s/^Group daemon/Group ${HTTPD_USER}/g"
+sed -e "s/^User daemon/User ${HTTPD_USER}/g" -e "s/^Group daemon/Group ${HTTPD_USER}/g" $HTTPD_CONF
 
-"${HTTPD_PREFIX}"/bin/apachectl start
-
-find "$HTTPD_PREFIX"
+find $HTTPD_PREFIX
+$HTTPD_START_APACHECTL start
