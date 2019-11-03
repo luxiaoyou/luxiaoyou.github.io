@@ -51,5 +51,6 @@ make && make install
 
 sed -e "s/^User daemon/User ${HTTPD_USER}/g" -e "s/^Group daemon/Group ${HTTPD_USER}/g" $HTTPD_CONF
 
-find $HTTPD_PREFIX
+find $HTTPD_PREFIX -maxdepth 1
 $HTTPD_START_APACHECTL start
+echo $HTTPD_START_APACHECTL start
