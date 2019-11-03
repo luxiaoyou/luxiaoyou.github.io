@@ -4,6 +4,7 @@ WORK_PATH=$(cd `dirname $0`;pwd)
 cd $WORK_PATH
 
 yum groupinstall "Development tools" -y
+yum install -y wget
 
 HTTPD_PREFIX=/opt/server/httpd
 
