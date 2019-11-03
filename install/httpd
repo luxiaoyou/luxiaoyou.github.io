@@ -17,8 +17,9 @@ HTTPD_TAR_UTIL_NAME=apr-util-1.6.1.tar.gz
 HTTPD_TAR_HTTPD_NAME=httpd-2.4.39.tar.bz2
 WITH_MPM=$1
 HTTPD_USER=$2
-useradd $NG_USER -g $HTTPD_USER -M -s /sbin/HTTPD_USER
-sed -e "s/^User daemon/User ${HTTPD_USER}/g" -e "s/^Group daemon/Group ${HTTPD_USER}/g"
+
+groupadd $HTTPD_USER
+useradd $HTTPD_USER -g $HTTPD_USER -M -s /sbin/nologin
 
 wget -c http://apache.spinellicreations.com//apr/$HTTPD_TAR_NAME
 wget -c http://apache.spinellicreations.com//apr/$HTTPD_TAR_UTIL_NAME
@@ -46,6 +47,8 @@ cd ${HTTPD_TAR_HTTPD_NAME/.tar.bz2}
  --with-mpm=$WITH_MPM
 
 make && make install
+
+sed -e "s/^User daemon/User ${HTTPD_USER}/g" -e "s/^Group daemon/Group ${HTTPD_USER}/g"
 
 ${HTTPD_PREFIX}/bin/apachectl start
 
