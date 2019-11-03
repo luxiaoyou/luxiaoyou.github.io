@@ -20,8 +20,8 @@ tar -xvf $HTTPD_TAR_NAME
 tar -xvf $HTTPD_TAR_UTIL_NAME
 tar -xvf $HTTPD_TAR_HTTPD_NAME
 
-\cp -a ${HTTPD_TAR_UTIL_NAME/.tar.gz} ./${HTTPD_TAR_HTTPD_NAME/.tar.bz2}/srclib/apr-util
-\cp -a ${HTTPD_TAR_NAME/.tar.gz} ./${HTTPD_TAR_HTTPD_NAME/.tar.bz2}/srclib/apr
+cp -a ${HTTPD_TAR_UTIL_NAME/.tar.gz} ./${HTTPD_TAR_HTTPD_NAME/.tar.bz2}/srclib/apr-util
+cp -a ${HTTPD_TAR_NAME/.tar.gz} ./${HTTPD_TAR_HTTPD_NAME/.tar.bz2}/srclib/apr
 
 cd ${HTTPD_TAR_HTTPD_NAME/.tar.bz2}
 
