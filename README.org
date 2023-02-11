@@ -1,6 +1,4 @@
-在线阅读 https://luxiaoyou.github.io/
-
-使用容器安装到本地：
+浣跨敤瀹瑰櫒瀹夎鍒版湰鍦帮細
 #+begin_src
 git clone https://github.com/luxiaoyou/luxiaoyou.github.io.git
 cd luxiaoyou.github.io
